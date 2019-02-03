@@ -452,15 +452,9 @@ $font-main: sans-serif;
     .banners__item {
       width: 100%;
     }
-    .banners__button_p,
-    .banners__button {
-      text-align: center;
-      line-height: 2.4em;
-      font-weight: bold;
-    }
-    .banners__item:hover ul > li {
-      color: $color-white;
-    }
+    // .banners__item:hover > div {
+    //   color: $color-white;
+    // }
       %bannersPnl {
         background-color: $color-white;
         border: 1px solid darken($color-white, 10%);
@@ -468,6 +462,9 @@ $font-main: sans-serif;
         float: left;
         height: 3vw;
         margin-bottom: 3px;
+        text-align: center;
+        line-height: 2.4em;
+        font-weight: bold;
       }
       .banners__openPnl {
         @extend %bannersPnl;
