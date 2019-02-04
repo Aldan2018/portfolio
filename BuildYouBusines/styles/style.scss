@@ -126,7 +126,7 @@ $font-main: sans-serif;
     }
     a {
       color: $color-white;
-      font-size: 1.5em;
+      font-size: 1em;
       line-height: 1.5em;
       margin: 35px;
       text-decoration: none;
@@ -366,7 +366,6 @@ $font-main: sans-serif;
     background-color: darken($color-white, 3%);
     height: 500px;
     margin: auto;
-    padding-bottom: 30px;
     width: $wrapper-width;
       h2 {
         font-family: $font-main;
@@ -443,18 +442,15 @@ $font-main: sans-serif;
             }
         }
       }
-
+// banners
   .banners {
-    width: 50%;
-    height: 436px;
     float: left;
+    height: 436px;
+    width: 50%;
   }
     .banners__item {
       width: 100%;
     }
-    // .banners__item:hover > div {
-    //   color: $color-white;
-    // }
       %bannersPnl {
         background-color: $color-white;
         border: 1px solid darken($color-white, 10%);
@@ -488,6 +484,7 @@ $font-main: sans-serif;
 .partners {
   display: flex;
   justify-content: space-between;
+  padding: 20px 0;
   width: 100%;
 }
 

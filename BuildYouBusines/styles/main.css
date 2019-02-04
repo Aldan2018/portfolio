@@ -153,7 +153,7 @@ table {
 }
 .main-nav a {
   color: #fff;
-  font-size: 1.5em;
+  font-size: 1em;
   line-height: 1.5em;
   margin: 35px;
   text-decoration: none;
@@ -405,7 +405,6 @@ table {
   background-color: #f7f7f7;
   height: 500px;
   margin: auto;
-  padding-bottom: 30px;
   width: 80%;
 }
 .news-banners h2 {
@@ -489,9 +488,9 @@ table {
 }
 
 .banners {
-  width: 50%;
-  height: 436px;
   float: left;
+  height: 436px;
+  width: 50%;
 }
 
 .banners__item {
@@ -529,6 +528,7 @@ table {
 .partners {
   display: flex;
   justify-content: space-between;
+  padding: 20px 0;
   width: 100%;
 }
 
