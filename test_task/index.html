@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="zxx">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous">
+    </script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./build/style.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
+    <title>Test page</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="contactsTop row justify-content-end align-items-center">
+          <div class="contactsTop__tel d-flex align-items-center">
+            <div class="img__tel"></div>
+            <a href="tel: +792 567 8745"><p class="mt-3">+792 567 8745</p></a>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="img__mail"></div>
+            <a href="mailto: contact@blueowlcreative.com"><p class="mt-3">contact@blueowlcreative.com</p></a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="navPanel">
+      <div class="container overflowForNav">
+        <div class="navPanel__content row flex-nowrap justify-content-between align-items-center">
+          <p>COMPANY NAME</p>
+          <nav class="menuOnTop" id='topMenu'>
+            <button id="showMenuButton" class="navButton btn" type="button" name="button">&#9776;</button>
+            <a class="active" href="#">HOME<img class='visible' src="img/active.png" alt=""></a>
+            <a class="" href="#">ABOUT US<img class='invisible' src="img/active.png" alt=""></a>
+            <a class="" href="#">PORTFOLIO<img class='invisible' src="img/active.png" alt=""></a>
+            <a class="" href="#">LATEST NEWS<img class='invisible' src="img/active.png" alt=""></a>
+            <a class="" href="#">CONTACT US<img class='invisible' src="img/active.png" alt=""></a>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="bgrndImg">
+      <!-- <div class="container d-flex align-items-center"> -->
+        <div class="carouselCustom">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div class="carousel-item-content">
+                  <h2>CONTRARY TO POPULAR BELIEF</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-item-content">
+                  <h2>CONTRARY TO POPULAR BELIEF</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="carousel-item-content">
+                  <h2>CONTRARY TO POPULAR BELIEF</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- </div> -->
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-prev" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-next" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="container">
+      <div class="iconWrapper px-2 row justify-content-between">
+        <div class="iconsBlock d-flex flex-column align-items-center flex-fill">
+          <div class="iconsBlock__circle">
+            <div class="iconsBlock__circle_desctop"></div>
+          </div>
+          <p class="iconsBlock__header">RESPONSIVE DESIGN</p>
+          <p class="iconsBlock__content">
+            I am so clever that sometimes
+            I do not understand a single
+            word of what I an saying and
+            get very confused
+          </p>
+        </div>
+        <div class="iconsBlock d-flex flex-column align-items-center flex-fill">
+          <div class="iconsBlock__circle">
+            <div class="iconsBlock__circle_tablet"></div>
+          </div>
+          <p class="iconsBlock__header">WEB DEVELOPMENT</p>
+          <p class="iconsBlock__content">
+            I am so clever that sometimes
+            I do not understand a single
+            word of what I an saying and
+            get very confused
+          </p>
+        </div>
+        <div class="iconsBlock d-flex flex-column align-items-center flex-fill">
+          <div class="iconsBlock__circle">
+            <div class="iconsBlock__circle_man"></div>
+          </div>
+          <p class="iconsBlock__header">CUSTOMER SUPPORT</p>
+          <p class="iconsBlock__content">
+            I am so clever that sometimes
+            I do not understand a single
+            word of what I an saying and
+            get very confused
+          </p>
+        </div>
+        <div class="iconsBlock d-flex flex-column align-items-center flex-fill">
+          <div class="iconsBlock__circle">
+            <div class="iconsBlock__circle_img"></div>
+          </div>
+          <p class="iconsBlock__header">IMAGES INCLUDED</p>
+          <p class="iconsBlock__content">
+            I am so clever that sometimes
+            I do not understand a single
+            word of what I an saying and
+            get very confused
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="searchBlock">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <h3>SEARCH</h3>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search..." aria-label="SEARCH" aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn searchButton" type="button" id="button-addon2"><img src="img/search.png" alt="">SEARCH</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="portfolio row flex-wrap justify-content-between">
+        <h6 class="col-12">PORTFOLIO</h6>
+        <div class="portfolio__item_wrapper d-flex flex-nowrap">
+        <div class="portfolio__item">
+          <div class="portfolio__item-image">
+            <img src="img/Layer124.jpg" alt="">
+            <div class="cover">
+              <span>+</span>
+            </div>
+          </div>
+          <div class="portfolio__footer">
+            <p>It is a long established fact</p>
+          </div>
+        </div>
+        <div class="portfolio__item">
+          <div class="portfolio__item-image">
+            <img src="img/Layer125.jpg" alt="">
+            <div class="cover">
+              <span>+</span>
+            </div>
+          </div>
+          <div class="portfolio__footer">
+            <p>It is a long established fact</p>
+          </div>
+        </div>
+        <div class="portfolio__item">
+          <div class="portfolio__item-image">
+            <img src="img/Layer126.jpg" alt="">
+            <div class="cover">
+              <span>+</span>
+            </div>
+          </div>
+          <div class="portfolio__footer">
+            <p>It is a long established fact</p>
+          </div>
+        </div>
+        <div class="portfolio__item">
+          <div class="portfolio__item-image">
+            <img src="img/Layer135.jpg" alt="">
+            <div class="cover">
+              <span>+</span>
+            </div>
+          </div>
+          <div class="portfolio__footer">
+            <p>It is a long established fact</p>
+          </div>
+        </div>
+
+        <div class="portfolio__item">
+          <div class="portfolio__item-image">
+            <img src="img/Layer135.jpg" alt="">
+            <div class="cover">
+              <span>+</span>
+            </div>
+          </div>
+          <div class="portfolio__footer">
+            <p>It is a long established fact</p>
+          </div>
+        </div>
+        <div class="portfolio__item">
+          <div class="portfolio__item-image">
+            <img src="img/Layer135.jpg" alt="">
+            <div class="cover">
+              <span>+</span>
+            </div>
+          </div>
+          <div class="portfolio__footer">
+            <p>It is a long established fact</p>
+          </div>
+        </div>
+        <div class="portfolio__item">
+          <div class="portfolio__item-image">
+            <img src="img/Layer135.jpg" alt="">
+            <div class="cover">
+              <span>+</span>
+            </div>
+          </div>
+          <div class="portfolio__footer">
+            <p>It is a long established fact</p>
+          </div>
+        </div>
+      </div>
+        <div class="portfolio__scroll">
+          <span class="portfolio__prev" id="portfolio__prev"></span>
+          <span class="portfolio__next" id="portfolio__next"></span>
+        </div>
+      </div>
+      <div class="posts py-3 row flex-wrap">
+        <h6 class="col-12">WHAT IS LOREM IPSUM?</h6>
+        <div class="posts__wrapper d-flex flex-nowrap">
+          <div class="posts__img position-relative">
+            <img src="img/Layer142.jpg" alt="">
+            <div class="post__img_title p-1 position-absolute">
+              <span>There are many variations</span>
+            </div>
+          </div>
+          <div class="post__content">
+            <p class="post__content_header">WHY DO WE USE IT</p>
+            <p class="post__content_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="news row flex-wrap">
+        <h6 class="col-12">LATEST NEWS</h6>
+        <div class="news__item col-sm-6 col-12 d-flex">
+          <!-- <div> -->
+            <img src="img/Layer127.jpg" class="img-fluid" alt="">
+          <!-- </div> -->
+          <div class="news__item_content">
+            <p class="news__item_content_header">SOME INTERESTING NEWS</p>
+            <p class="news__item_content_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button type="button" class="btn btn-danger btnReadMore">READ MORE</button>
+          </div>
+        </div>
+        <div class="news__item col-sm-6 col-12 d-flex">
+          <!-- <div> -->
+            <img src="img/Layer128.jpg" class="img-fluid" alt="">
+          <!-- </div> -->
+          <div class="news__item_content">
+            <p class="news__item_content_header">SOME INTERESTING NEWS</p>
+            <p class="news__item_content_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button type="button" class="btn btn-danger btnReadMore">READ MORE</button>
+          </div>
+        </div>
+        <div class="news__item col-sm-6 col-12 d-flex">
+          <!-- <div> -->
+            <img src="img/Layer129.jpg" class="img-fluid" alt="">
+          <!-- </div> -->
+          <div class="news__item_content">
+            <p class="news__item_content_header">SOME INTERESTING NEWS</p>
+            <p class="news__item_content_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button type="button" class="btn btn-danger btnReadMore">READ MORE</button>
+          </div>
+        </div>
+        <div class="news__item col-sm-6 col-12 d-flex">
+          <!-- <div > -->
+            <img src="img/Layer130.jpg" class="img-fluid" alt="">
+          <!-- </div> -->
+          <div class="news__item_content">
+            <p class="news__item_content_header">SOME INTERESTING NEWS</p>
+            <p class="news__item_content_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <button type="button" class="btn btn-danger btnReadMore">READ MORE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footerTop">
+      <div class="container d-flex flex-wrap">
+        <div class="footer__info d-flex flex-wrap">
+            <nav class="navigation col-sm-4 col-6">
+              <p class="footer__header">NAVIGATION</p>
+              <a href="#" class="col-12 d-inline-block">&rsaquo; &nbsp; Home</a>
+              <a href="#" class="col-12 d-inline-block">&rsaquo; &nbsp; About Us</a>
+              <a href="#" class="col-12 d-inline-block">&rsaquo; &nbsp; Portfolio</a>
+              <a href="#" class="col-12 d-inline-block">&rsaquo; &nbsp; Lastest News</a>
+              <a href="#" class="col-12 d-inline-block">&rsaquo; &nbsp; Contact Us</a>
+            </nav>
+            <div class="contact__bottom col-4">
+              <p class="footer__header">CONTACTS</p>
+              <div class="contacts__tel">
+                <span>+792 567 87 45</span>
+              </div>
+              <div class="contacts__mail">
+                <span>contact@blueowlcreative.com</span>
+              </div>
+              <div class="contacts__post">
+                <span>3451 52nd Ave., New York City</span>
+              </div>
+            </div>
+            <form class="col-sm-4 col-6 d-flex flex-wrap">
+              <input type="text" class="form-control form-width" placeholder="Name">
+              <input type="email" class="form-control form-width" placeholder="E-mail">
+              <input type="tel" class="form-control form-width" placeholder="Phone">
+              <textarea rows="2" class="form-control form-width" placeholder="Message"></textarea>
+              <button type="button" class="btn btn-danger btnContact">CONTACT US</button>
+            </form>
+          </div>
+          <div class="social col-12 d-flex flex-nowrap justify-content-center">
+            <a href="#"><p class="pinteress"></p></a>
+            <a href="#"><p class="google"></p></a>
+            <a href="#"><p class="twitter"></p></a>
+            <a href="#"><p class="facebook"></p></a>
+            <a href="#"><p class="skype"></p></a>
+          </div>
+      </div>
+    </footer>
+    <footer class="footerBottom">
+      <div class="container">
+        <span>&#169; Copyright 2019</span>
+      </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="./scripts/script.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
