@@ -6,10 +6,10 @@ let topMenuArray = Array.from($('#topMenu').children());
 topMenu.click(function () {
   topMenuArray.forEach(function () {
     topMenu.removeClass("active");
-    topMenu.children().removeClass("visible").addClass("invisible");
+    topMenu.children('img').removeClass("visible").addClass("invisible");
   })
   $(this).addClass("active");
-  $(this).children().removeClass("invisible").addClass("visible");
+  $(this).children('img').removeClass("invisible").addClass("visible");
 })
 
 // hide-show top menu
@@ -17,47 +17,54 @@ topMenu.click(function () {
 let topMenuButton = $('#showMenuButton');
 let menuArea = $('#topMenu');
 topMenuButton.click(function () {
-  let currentMenuHeight = menuArea.css("height").replace(/\D+/g,"");
-  if(currentMenuHeight == 32) {
-  menuArea.animate({
-    height: '+=140'
-  }), 500} else {
-    menuArea.css('height', '32px')
-  }
+  menuArea.toggle();
 })
 
 
 
 // scrolling portfolio block
 
-let container = $('.container').width();
 let portfolioWrapper = $('.portfolio__item_wrapper');
 let prevButton = $('.portfolio__prev');
 let nextButton = $('.portfolio__next');
 
-let containerWidth = $('.container').width();
 let portfolioWrapperWidth = $('.portfolio__item_wrapper').width();
-let hidenWrapper = portfolioWrapperWidth - containerWidth;
 
+let itemWidth = portfolioWrapperWidth/portfolioWrapper.children().length;
+
+if (portfolioWrapper.children().length > 4) {
+    portfolioWrapper.children().last().prependTo(portfolioWrapper);
+    portfolioWrapper.css("margin-left", -itemWidth + 'px');
 
 prevButton.click(function () {
-  let currentMarginLeft = portfolioWrapper.css("margin-left").replace(/\D+/g,"");
-  if(currentMarginLeft > 0) {
+    let currentMarginLeft = parseInt(portfolioWrapper.css("margin-left"));
+
+    if (currentMarginLeft > -itemWidth*2) {
+      portfolioWrapper.children().last().prependTo(portfolioWrapper);
+      portfolioWrapper.css("margin-left", -itemWidth*2 + 'px');
+    }
+
     portfolioWrapper.animate({
-      marginLeft: '+=77'
+      'marginLeft': -itemWidth + 'px'
     }, 500);
-  } else {
-    return
-  }
+
 });
+
 nextButton.click(function () {
-  let currentMarginLeft = portfolioWrapper.css("margin-left").replace(/\D+/g,"");
-  if(currentMarginLeft < hidenWrapper) {
-    // portfolioWrapper.css("margin-left", marginChange + "px")
-    portfolioWrapper.animate({
-      marginLeft: '-=77'
-    }, 500);
-  } else {
-    return
+  let currentMarginLeft = parseInt(portfolioWrapper.css("margin-left"));
+  let nextAddPoint = (portfolioWrapper.children().length - 5)*itemWidth;
+
+  if (currentMarginLeft <= -nextAddPoint) {
+    portfolioWrapper.children().first().appendTo(portfolioWrapper);
+    currentMarginLeft += itemWidth;
+    portfolioWrapper.css("margin-left", currentMarginLeft + 'px');
   }
+
+  currentMarginLeft -= itemWidth;
+  portfolioWrapper.animate({
+    'marginLeft': currentMarginLeft + 'px'
+  }, 500);
 });
+
+
+}
