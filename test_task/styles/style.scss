@@ -7,6 +7,8 @@ $border-color: #b7aa9c;
 $light-color: #fff;
 $header-text-color: #666666;
 $text-color: #888888;
+$submenu-color: #e1d4c1;
+$submenu-item-hover-color: #9e9e9e;
 $fontN: "Noto Sans", sans-serif;
 $fontM: "Merriweather Sans", sans-serif;
 
@@ -104,18 +106,84 @@ body {
 .navPanel li.active {
   color: $darck-color;
 }
-.latest_news_menu{
+.parent_menu{
+  position: relative;
+}
+.parent_menu::after{
+  content: '';
+  position: absolute;
+  border: 5px solid transparent;
+}
+
+%submenu{
   display: none;
   width: max-content;
   height: auto;
   padding: 0;
   position: absolute;
+  background-color: $submenu-color;
   li{
     display: block;
+    color: $darck-color;
+    line-height: 30px;
+    border-bottom: 1px solid $border-color;
+    margin-left: 0;
+    padding-left: 21px;
+    padding-right: 30px;
   }
 }
-
-.latest_news:hover .latest_news_menu{
+.submenu{
+  @extend %submenu;
+  top: 30px;
+}
+.sub_submenu{
+  @extend %submenu;
+  left: 138px;
+  top: 0;
+}
+@mixin submenu_arrow($p){
+  content: '';
+  position: absolute;
+  border: $p solid transparent;
+}
+.submenu:after {
+  @include submenu_arrow(10px);
+  left: 20px;
+  top: -20px;
+  border-bottom: 10px solid $submenu-color;
+ }
+ .sub_submenu:after {
+   @include submenu_arrow(10px);
+   left: -20px;
+   top: 5px;
+   border-right: 10px solid $submenu-color;
+  }
+.parent_menu::after{
+  @include submenu_arrow(5px);
+  right: -5px;
+  top: 8px;
+  border-top: 5px solid #fff;
+}
+.submenu li:hover,
+.sub_submenu li:hover {
+  background-color: $submenu-item-hover-color;
+}
+.parent_menu:hover > .submenu{
+  display: block;
+}
+.parent_menu:hover:after{
+  border-top: 5px solid $darck-color;
+}
+.sub_parent_menu{
+  position: relative;
+}
+.sub_parent_menu::after{
+  @include submenu_arrow(5px);
+  right: 5px;
+  top: 10px;
+  border-left: 5px solid $darck-color;
+}
+.sub_parent_menu:hover > .sub_submenu{
   display: block;
 }
 
@@ -590,7 +658,7 @@ footer{
 @media (max-width: 992px) {
   .navPanel__content li{
     margin: 0;
-    padding: 0 10px;
+    padding: 0 20px;
   }
   .menuOnTop{
     display: none;
@@ -598,16 +666,50 @@ footer{
     margin-right: 40px;
     right: 0;
     top: 100px;
+    z-index: 99;
     li{
-      border: 1px solid $darck-color;
+      border: 1px solid $border-color;
       font-size: x-large;
-      background-color: $orange-color;
+      background-color: $submenu-color;
     }
   }
-  .latest_news_menu{
+  .parent_menu:after{
+    right: 5px;
+    top: 15px;
+    border-left: 5px solid #fff;
+    border-top: 5px solid transparent;
+  }
+  .parent_menu:hover:after{
+    border-top: 5px solid $darck-color;
+    border-left: 5px solid transparent;
+  }
+  .sub_parent_menu:after{
+    right: 5px;
+    top: 10px;
+    border-left: 5px solid $darck-color;
+    border-top: 5px solid transparent;
+  }
+  .sub_parent_menu:hover:after{
+    border-top: 5px solid #fff;
+    border-left: 5px solid transparent;
+  }
+  .submenu{
+    padding: 20px 0;
+    position: inherit;
+    top: 0;
     li{
       border: none;
     }
+  }
+  .sub_submenu{
+    padding: 20px 0;
+    position: inherit;
+    left: 0;
+  }
+  .submenu li:hover,
+  .sub_submenu li:hover{
+    background-color: inherit;
+    color: #fff;
   }
   .navButton{
     display: block;

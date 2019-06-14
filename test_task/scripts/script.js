@@ -1,16 +1,16 @@
 // select menu
 
-let topMenu = $('#topMenu').children();
-let topMenuArray = Array.from($('#topMenu').children());
-
-topMenu.click(function () {
-  topMenuArray.forEach(function () {
-    topMenu.removeClass("active");
-    topMenu.children('img').removeClass("visible").addClass("invisible");
-  })
-  $(this).addClass("active");
-  $(this).children('img').removeClass("invisible").addClass("visible");
-})
+// let topMenu = $('#topMenu').children();
+// let topMenuArray = Array.from($('#topMenu').children());
+//
+// topMenu.click(function () {
+//   topMenuArray.forEach(function () {
+//     topMenu.removeClass("active");
+//     topMenu.children('img').removeClass("visible").addClass("invisible");
+//   })
+//   $(this).addClass("active");
+//   $(this).children('img').removeClass("invisible").addClass("visible");
+// })
 
 // hide-show top menu
 
@@ -65,6 +65,4 @@ nextButton.click(function () {
     'marginLeft': currentMarginLeft + 'px'
   }, 500);
 });
-
-
 }

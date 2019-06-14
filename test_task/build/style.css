@@ -99,18 +99,97 @@ body ul, body li {
   color: #000;
 }
 
-.latest_news_menu {
+.parent_menu {
+  position: relative;
+}
+
+.parent_menu::after {
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+}
+
+.sub_submenu, .submenu {
   display: none;
   width: max-content;
   height: auto;
   padding: 0;
   position: absolute;
+  background-color: #e1d4c1;
 }
-.latest_news_menu li {
+.sub_submenu li, .submenu li {
+  display: block;
+  color: #000;
+  line-height: 30px;
+  border-bottom: 1px solid #b7aa9c;
+  margin-left: 0;
+  padding-left: 21px;
+  padding-right: 30px;
+}
+
+.submenu {
+  top: 30px;
+}
+
+.sub_submenu {
+  left: 138px;
+  top: 0;
+}
+
+.submenu:after {
+  content: "";
+  position: absolute;
+  border: 10px solid transparent;
+  left: 20px;
+  top: -20px;
+  border-bottom: 10px solid #e1d4c1;
+}
+
+.sub_submenu:after {
+  content: "";
+  position: absolute;
+  border: 10px solid transparent;
+  left: -20px;
+  top: 5px;
+  border-right: 10px solid #e1d4c1;
+}
+
+.parent_menu::after {
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+  right: -5px;
+  top: 8px;
+  border-top: 5px solid #fff;
+}
+
+.submenu li:hover,
+.sub_submenu li:hover {
+  background-color: #9e9e9e;
+}
+
+.parent_menu:hover > .submenu {
   display: block;
 }
 
-.latest_news:hover .latest_news_menu {
+.parent_menu:hover:after {
+  border-top: 5px solid #000;
+}
+
+.sub_parent_menu {
+  position: relative;
+}
+
+.sub_parent_menu::after {
+  content: "";
+  position: absolute;
+  border: 5px solid transparent;
+  right: 5px;
+  top: 10px;
+  border-left: 5px solid #000;
+}
+
+.sub_parent_menu:hover > .sub_submenu {
   display: block;
 }
 
@@ -618,7 +697,7 @@ footer {
 @media (max-width: 992px) {
   .navPanel__content li {
     margin: 0;
-    padding: 0 10px;
+    padding: 0 20px;
   }
 
   .menuOnTop {
@@ -627,15 +706,57 @@ footer {
     margin-right: 40px;
     right: 0;
     top: 100px;
+    z-index: 99;
   }
   .menuOnTop li {
-    border: 1px solid #000;
+    border: 1px solid #b7aa9c;
     font-size: x-large;
-    background-color: #bb4a1b;
+    background-color: #e1d4c1;
   }
 
-  .latest_news_menu li {
+  .parent_menu:after {
+    right: 5px;
+    top: 15px;
+    border-left: 5px solid #fff;
+    border-top: 5px solid transparent;
+  }
+
+  .parent_menu:hover:after {
+    border-top: 5px solid #000;
+    border-left: 5px solid transparent;
+  }
+
+  .sub_parent_menu:after {
+    right: 5px;
+    top: 10px;
+    border-left: 5px solid #000;
+    border-top: 5px solid transparent;
+  }
+
+  .sub_parent_menu:hover:after {
+    border-top: 5px solid #fff;
+    border-left: 5px solid transparent;
+  }
+
+  .submenu {
+    padding: 20px 0;
+    position: inherit;
+    top: 0;
+  }
+  .submenu li {
     border: none;
+  }
+
+  .sub_submenu {
+    padding: 20px 0;
+    position: inherit;
+    left: 0;
+  }
+
+  .submenu li:hover,
+.sub_submenu li:hover {
+    background-color: inherit;
+    color: #fff;
   }
 
   .navButton {

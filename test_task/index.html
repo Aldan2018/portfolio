@@ -39,11 +39,25 @@
           <p>COMPANY NAME</p>
           <button id="showMenuButton" class="navButton btn" type="button" name="button">&#9776;</button>
           <ul class="menuOnTop" id='topMenu'>
-            <li class="active" href="#">HOME<img class='visible' src="img/active.png" alt=""></li>
+            <li class="parent_menu" href="#">HOME<img class='invisible' src="img/active.png" alt="">
+              <ul class="submenu">
+                <li>BRUSHES</li>
+                <li class="sub_parent_menu">TEXTURES
+                  <ul class="sub_submenu">
+                    <li>BRUSHES</li>
+                    <li>TEXTURES</li>
+                    <li>ICON SETS</li>
+                  </ul>
+                </li>
+                <li>ICON SETS</li>
+                <li>PATTERNS</li>
+                <li>VECTORS</li>
+              </ul>
+            </li>
             <li class="" href="#">ABOUT US<img class='invisible' src="img/active.png" alt=""></li>
             <li class="" href="#">PORTFOLIO<img class='invisible' src="img/active.png" alt=""></li>
-            <li class="latest_news" href="#">LATEST NEWS<img class='invisible' src="img/active.png" alt="">
-              <ul class="latest_news_menu">
+            <li class="parent_menu" href="#">LATEST NEWS<img class='invisible' src="img/active.png" alt="">
+              <ul class="submenu">
                 <li href="#">news_new</li>
                 <li href="#">news_new</li>
                 <li href="#">news_new</li>
