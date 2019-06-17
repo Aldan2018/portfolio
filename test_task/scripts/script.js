@@ -36,6 +36,19 @@ if (portfolioWrapper.children().length > 4) {
     portfolioWrapper.children().last().prependTo(portfolioWrapper);
     portfolioWrapper.css("margin-left", -itemWidth + 'px');
 
+    $(window).resize(function() {
+      if($(window).width() <= '576') {
+        portfolioWrapper.css("margin-left", 0 + 'px');
+        itemWidth = portfolioWrapperWidth/portfolioWrapper.children().length;
+        portfolioWrapperWidth = $('.portfolio__item_wrapper').width();
+      }
+      if($(window).width() > '576') {
+        portfolioWrapper.css("margin-left", -itemWidth + 'px');
+        itemWidth = portfolioWrapperWidth/portfolioWrapper.children().length;
+        portfolioWrapperWidth = $('.portfolio__item_wrapper').width();
+      }
+    })
+
 prevButton.click(function () {
     let currentMarginLeft = parseInt(portfolioWrapper.css("margin-left"));
 

@@ -1,3 +1,7 @@
+html {
+  font-size: inherit;
+}
+
 body {
   background-color: #eae1d2;
 }
@@ -63,6 +67,7 @@ body ul, body li {
   display: none;
   background-color: #a94718;
   color: #fff;
+  z-index: 10;
 }
 
 .menuOnTop {
@@ -74,6 +79,7 @@ body ul, body li {
 
 .navPanel__content {
   height: inherit;
+  position: relative;
 }
 .navPanel__content p {
   font-family: "Merriweather Sans", sans-serif;
@@ -83,15 +89,19 @@ body ul, body li {
   color: #000;
 }
 .navPanel__content li {
-  font-family: "Merriweather Sans", sans-serif;
-  color: #fff;
-  text-decoration: none;
   margin-left: 21px;
-  font-size: 14px;
   z-index: 10;
   cursor: default;
 }
-.navPanel__content li:hover {
+.navPanel__content li a {
+  font-size: 14px;
+  font-family: "Merriweather Sans", sans-serif;
+  color: #fff;
+  text-decoration: none;
+  z-index: 10;
+  text-transform: uppercase;
+}
+.navPanel__content li a:hover {
   color: #000;
 }
 
@@ -158,14 +168,18 @@ body ul, body li {
   content: "";
   position: absolute;
   border: 5px solid transparent;
-  right: -5px;
-  top: 8px;
+  right: -10px;
+  top: 10px;
   border-top: 5px solid #fff;
 }
 
 .submenu li:hover,
 .sub_submenu li:hover {
   background-color: #9e9e9e;
+}
+
+.parent_menu:hover > a {
+  color: #000;
 }
 
 .parent_menu:hover > .submenu {
@@ -233,16 +247,12 @@ body ul, body li {
 }
 
 .carousel-item-content {
-  width: 53%;
+  width: 72%;
   height: 352px;
   padding: 74px 20px 20px 25px;
   background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid gray;
   color: #fff;
-  margin-left: 13%;
-  position: absolute;
-  top: 84px;
-  left: 2%;
 }
 .carousel-item-content h2 {
   font-size: 36px;
@@ -272,6 +282,16 @@ body ul, body li {
 .carousel-indicators .active {
   background-color: #eda182;
   opacity: 1;
+}
+
+.carouselContain {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 68%;
 }
 
 .iconWrapper {
@@ -506,6 +526,7 @@ body ul, body li {
 
 .post__content_content {
   color: #888888;
+  padding: 0 15px;
 }
 
 .news {
@@ -542,6 +563,7 @@ body ul, body li {
   font-size: 14px;
   color: #666666;
   margin-bottom: 6px;
+  text-transform: uppercase;
 }
 
 .news__item_content_content {
@@ -678,6 +700,11 @@ footer {
   line-height: 4em;
 }
 
+@media (max-width: 1280px) {
+  .carousel-item-content {
+    margin-left: 13%;
+  }
+}
 @media (min-width: 1200px) {
   .container {
     max-width: 960px;
@@ -685,11 +712,10 @@ footer {
 }
 @media (max-width: 1050px) {
   .carousel-item-content {
-    margin-left: 20%;
     padding-top: 30px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 994px) {
   .menuOnTop {
     display: flex !important;
   }
@@ -703,20 +729,30 @@ footer {
   .menuOnTop {
     display: none;
     position: absolute;
-    margin-right: 40px;
     right: 0;
-    top: 100px;
+    top: 91px;
     z-index: 99;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
   .menuOnTop li {
     border: 1px solid #b7aa9c;
-    font-size: x-large;
     background-color: #e1d4c1;
+  }
+  .menuOnTop li a {
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .submenu, .sub_submenu {
+    width: auto;
   }
 
   .parent_menu:after {
     right: 5px;
-    top: 15px;
+    top: 8px;
     border-left: 5px solid #fff;
     border-top: 5px solid transparent;
   }
@@ -795,10 +831,6 @@ footer {
 @media (max-width: 768px) {
   .bgrndImg {
     height: 260px;
-  }
-
-  .menuOnTop {
-    margin-right: 10px;
   }
 
   .carousel-item-content {
